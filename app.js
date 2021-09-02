@@ -46,9 +46,9 @@ function clickHandler(e) {
   ) {
     alert("Please enter all the attributes!");
   } else {
-    var initialPrice = Number.parseFloat(costPrice.value).toFixed(2);
-    var currentPrice = Number.parseFloat(sellingPrice.value).toFixed(2);
-    var quantity = Number.parseFloat(quantityStocks.value).toFixed(2);
+    var initialPrice = Number(costPrice.value);
+    var currentPrice = Number(sellingPrice.value);
+    var quantity = Number(quantityStocks.value);
 
     calculateProfitAndLoss(initialPrice, currentPrice, quantity);
   }
